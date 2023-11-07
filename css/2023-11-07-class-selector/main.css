@@ -1,0 +1,35 @@
+/* gs sınıfının üyeleri */
+.gs{ color:red; }
+
+
+/* gs sınıfının üyesi olan paragraflar */
+p.gs{ color:red; }
+
+
+/* paragrafların alt öğesi olan gs'liler */
+p .gs{ color:aqua; }
+
+
+/* paragrafların çocuğu olan gs'liler */
+p > .gs{ color:aqua; }
+
+
+
+
+.fb{
+    color:blue;
+}
+
+p.fb.vip{
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+

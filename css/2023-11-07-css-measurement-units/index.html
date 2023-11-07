@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css measurement units</title>
+    <!--  256px * 256px--->
+    <link rel="icon" href="images/logo.png" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <!-- fonts.google.com Ibm plex mono-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="root">
+      <header>
+        <h1>Css <strong>ölçü</strong> birimleri</h1>
+
+        <nav class="nav-main">
+          <ul>
+            <li class="current">
+              <a href="index.html">Ana sayfa</a>
+            </li>
+            <li >
+              <a href="links.html">Linkler</a>
+            </li>
+            <li >
+              <a href="recommendations.html">Önerileriniz</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section class="section-1">
+          <h1>"Px" ölçü birimi</h1>
+          <p>px, esnek olmayan bir ölçü birimidir.</p>
+          <div class="container">
+            <div class="box">100px * 100px</div>
+          </div>
+        </section>
+
+        <section class="section-2">
+          <h1>"%" ölçü birimi</h1>
+          <p>% ( yüzde) ölçü birimi, esnek ve göreli bir ölçü birimidir.</p>
+          <div class="container">
+            <div class="box">50% * 50%</div>
+          </div>
+        </section>
+
+        <section class="section-3">
+          <h1>"rem" ölçü birimi</h1>
+          <p>
+            rem ( root em ) ölçü birimi, göreli bir ölçü birimidir. 1rem html
+            kök etiketinin font büyüklüğüne eşittir
+          </p>
+          <div class="container">
+            <div class="box">10rem * 10rem</div>
+          </div>
+        </section>
+
+        <section class="section-4">
+          <h1>"vw, vh" ölçü birimi</h1>
+          <p>
+            vw, vh ( viewport width, viewport height ) ölçü birimi, göreli ve
+            esnek bir ölçü birimidir. 100vw, viewportun tüm genişliğine eşittir;
+            100vh viewportun tüm yüksekliğine eşittir.
+          </p>
+          <div class="container">
+            <div class="box">10vw * 10vh</div>
+          </div>
+        </section>
+
+        <!-- vmin, vmax -->
+      </main>
+      <footer>F</footer>
+    </div>
+  </body>
+</html>

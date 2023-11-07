@@ -1,0 +1,20 @@
+/* selector */
+
+p{ color:red; }
+
+
+/* combinator via space  */
+section p{
+    color:blue;
+}
+
+
+
+
+/* combinator via ">"  child slector*/
+
+section > p{color:orange}
+
+
+
+

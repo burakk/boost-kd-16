@@ -1,0 +1,22 @@
+body{
+    color:pink;
+}
+
+a{
+    color:inherit;
+}
+
+div{
+    color:blue;
+}
+
+
+
+section{
+    border:1px solid black;
+}
+
+
+h1{
+    border:inherit;
+}

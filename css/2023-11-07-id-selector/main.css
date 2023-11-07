@@ -1,0 +1,26 @@
+#root{
+    border:10px solid black;
+}
+
+
+#root > header{
+    border:10px solid blue;
+}
+
+
+main{
+    border:10px solid red;
+}
+
+
+#root > footer{
+    border:10px solid blue;
+}
+
+
+
+
+
+
+
+

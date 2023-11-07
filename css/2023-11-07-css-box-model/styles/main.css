@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+}
+
+h1{
+    font-size:40px;
+}
+
+
+
+.box{
+    border:10px solid black;
+    width:200px;
+    height:200px;
+
+    /*
+       border-width:10px;
+       border-style:solid;
+       border-color:black; 
+    */
+
+
+    padding:24px; /* çerçeve ile içerik arasındaki boşluk*/
+
+    padding-top:24px;
+    padding-right: 24px;
+    padding-bottom:24px;
+    padding-left:24px;
+
+    padding:24px 24px 24px 24px; /*CW ( Clock Wise ) T, R, B, L */
+
+    padding:24px 12px; /* v (top, ve bottom), h (right ve left )  */
+
+    padding: 24px 12px 32px; /* top,right-left, bottom */
+
+    margin:24px; /* çerçevenin dışına konan boşluk */
+
+}

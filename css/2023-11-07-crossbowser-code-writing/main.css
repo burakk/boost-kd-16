@@ -1,0 +1,36 @@
+h1{
+    font-size:40px;
+}
+
+ol{margin:64px;}
+
+ol>li{ list-style:decimal-leading-zero;}
+
+
+div{
+    border:3px solid black;
+
+    /* vendor prefixes */
+    /* -moz (firefox)
+        -webkit ( chrome ve safari)
+        -o ( opera )
+        -ms ( microsoft )
+
+    */
+
+
+    -webkit-border-radius:16px;
+    -o-border-radius:16px;
+    border-radius:16px;
+
+
+    display:inline-block;
+}
+
+
+
+@supports( display:flex ){
+    div{display:flex;}
+}
+
+

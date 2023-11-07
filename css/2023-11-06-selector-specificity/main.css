@@ -1,0 +1,19 @@
+html body section h1{
+    color:aqua;
+}
+
+html body section h1{
+    color:red;
+}
+
+
+section h1{
+    color:green;
+}
+
+h1{ color:pink; } 
+
+
+html body section p#deneme.test{
+    color:purple!important; /* use with caution */
+}
