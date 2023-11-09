@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- 1. step in responsiveness -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Css responsive web 101 örnek</title>
+    <!--  256px * 256px--->
+    <link rel="icon" href="images/logo.png" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <!-- fonts.google.com Ibm plex mono-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="root">
+      <header>
+        <div class="limited-width">
+          <a href="" class="logo"> Logo </a>
+        </div>
+
+        <nav class="nav-hamburger">
+          <button class="btn-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <ul>
+            <li>
+              <a href="#">Item 1</a>
+            </li>
+            <li>
+              <a href="#">Item 2</a>
+            </li>
+            <li>
+              <a href="#">Item 3</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section class="banner">
+          <div class="inner-container limited-width"><h1>How r u?</h1></div>
+        </section>
+
+        <section class="limited-width">
+          <h1>Öne çıkanlar:</h1>
+          <ul class="card-list">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+          </ul>
+        </section>
+      </main>
+      <footer><div class="limited-width">Hello limited</div></footer>
+    </div>
+  </body>
+</html>

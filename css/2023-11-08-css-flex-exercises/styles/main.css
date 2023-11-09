@@ -8,6 +8,10 @@ body{
     
 }
 
+img{
+    max-width:100%;
+}
+
 h1{
     font-size:32px;
     margin-bottom:16px;
@@ -63,6 +67,7 @@ main > section{
 }   
 
 /* egzersizler */
+/* e1 */
 div.e1{
     border:2px solid red;
     display:flex;
@@ -80,6 +85,79 @@ div.e1 nav{
 
 }
 
+/* e2 */
+div.e2{
+
+    border:2px solid blue;
+    display:flex;
+   justify-content: space-between;
+   align-items: center;
+
+}
+
+div.e2 > .logo{ border:2px solid red; }
+
+div.e2 > .container-navs{
+    border:6px solid rgb(31, 175, 31);
+   display:flex;
+   flex-direction: row;
+   align-items: center;
+   gap: 8px;
+}
+
+div.e2 > .container-navs > *{
+    border:4px solid orange;
+}
+
+div.e2 > .container-navs > nav > ul{
+    display:flex;
+}
+
+div.e2 > .container-navs > nav:nth-child(2){
+    font-size: 0.7rem;
+}
+
+
+/* e3 */
+
+div.e3{
+    border:2px solid blue;
+}
+
+div.e3 .card-list{
+    border:2px solid black;
+    background-color: pink;
+    display:flex;
+    gap:8px;
+}
+
+div.e3 .card-list > .card{
+border:10px solid orange; 
+background-color: white;
+margin:0;
+border-radius:16px;
+
+flex-grow:1;
+/* flex-shrink:1 */
+flex-basis:0;
+
+flex:1 1 0; /* grow shrink basis */
+}
+
+div.e3 .card-list > .card > header{
+    height:200px;
+    border:10px solid blue; 
+}
+
+
+div.e3 .card-list > .card > header > img{
+    object-fit: cover;
+    object-position: 20% 20%;
+    width:100%;
+    height:100%;
+}
+
+div.e3 .card-list > .card > .content{ height:300px; }
 
 
 

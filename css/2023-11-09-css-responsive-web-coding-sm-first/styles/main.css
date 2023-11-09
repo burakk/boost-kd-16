@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+}
+
+
+img{
+    max-width:100%;
+}
+
+body{
+    font-family: 'IBM Plex Mono', monospace;
+    background-color: rgb(236, 229, 242);
+    
+    
+}
+
+
+h1{
+    font-size:32px;
+    margin-bottom:16px;
+  
+}
+
+h1 strong{
+    background-color: black;
+    color:aquamarine;
+   
+}
+
+a{
+    color:inherit;
+    text-decoration: none;
+}
+
+
+/* break point */
+/* @rule media  */
+
+/* içinde bulunduğum cihaz görüntüleyebilir bir cihaz ise ve viewportun minimum genişliği 700px ise kod bloğu çalışsın */
+@media screen and ( min-width:700px ){
+    body{
+    background-color:rgb(231, 231, 192);
+    }
+}
+
+
+@media screen and ( min-width:1200px ){
+    body{
+    background-color:rgb(204, 233, 219);
+    }
+}
