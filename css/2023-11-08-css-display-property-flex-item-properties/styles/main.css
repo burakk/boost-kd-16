@@ -1,0 +1,99 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'IBM Plex Mono', monospace;
+    background-color: rgb(236, 229, 242);
+    
+}
+
+h1{
+    font-size:32px;
+    margin-bottom:16px;
+  
+}
+
+h1 strong{
+    background-color: black;
+    color:aquamarine;
+   
+}
+
+a{
+    color:inherit;
+    text-decoration: none;
+}
+
+li{
+    margin:16px 0;
+}
+
+
+.wrapper:first-child{
+    border:3px solid blue;
+    width:500px;
+    height:300px;
+    display:flex;
+    flex-direction:row;
+    justify-content: start;
+    align-items: stretch;
+}
+
+.wrapper:first-child .box{ 
+    border:1px solid red; 
+    order:1001;
+    
+}
+
+.wrapper:first-child .box:last-child{
+    order:1000;
+    align-self:end; /* cross axis */
+    
+    /*
+      flex-grow:0; distribution of positive space
+      flex-shrink:1;
+      flex-basis:auto;
+
+      flex:0 1 auto; grow shrink basis
+    */
+}
+
+
+
+
+.wrapper:nth-child(2){
+    border:10px solid black;
+    display:flex;
+   
+}
+
+.wrapper:nth-child(2) .box{ 
+    border:2px solid blue;
+    flex-grow:1;
+    flex-basis:0;
+}
+
+.wrapper:nth-child(2) .box:last-child{
+    flex-grow:2;
+}
+
+
+
+.wrapper:nth-child(3){
+    border:10px solid black;
+    display:flex;
+   
+}
+
+.wrapper:nth-child(3) .box{ 
+    border:2px solid blue;
+    flex-grow:0;
+    flex-basis:auto;
+}
+
+.wrapper:nth-child(3) .box:last-child{
+   flex-basis:300px;
+}
+
+

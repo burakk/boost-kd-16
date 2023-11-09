@@ -1,0 +1,62 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'IBM Plex Mono', monospace;
+    background-color: rgb(236, 229, 242);
+}
+
+h1{
+    font-size:32px;
+    margin-bottom:16px;
+}
+
+h1 strong{
+    background-color: black;
+    color:aquamarine;
+}
+
+a{
+    color:inherit;
+    text-decoration: none;
+}
+
+li{
+    margin:16px 0;
+}
+
+/* Components */
+
+/* Card */
+.card-list{
+    border:2px solid blue;
+}
+
+.card{
+    border:1px solid purple;
+    background-color: white;
+    width:200px;
+    border-radius: 8px;
+    padding:8px;
+}
+
+.card.soldout::after{
+    content:"tükendi";
+    background-color:red;
+    color:white;
+}
+
+.card.promo::before{
+    content:"promosyonlu";
+    background-color:green;
+    color:white;
+}
+
+
+
+
+
+
+
+

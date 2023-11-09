@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Css measurement units">
     <title>Css measurement units - öneriler</title>
     <!--  256px * 256px--->
     <link rel="icon" href="images/logo.png" />
@@ -38,14 +39,29 @@
       </header>
       <main>
         <section >
-          <h1>Faydalı linkler</h1>
-         <ul>
-          <li><a href="#">Mdn px ölçü birimi</a></li>
-          <li><a href="#">Mdn px ölçü birimi</a></li>
-          <li><a href="#">Mdn px ölçü birimi</a></li>
-          <li><a href="#">Mdn px ölçü birimi</a></li>
-          <li><a href="#">Mdn px ölçü birimi</a></li>
-         </ul>
+          <h1>Önerileriniz lütfen:</h1>
+        <!-- form, first name, last name, email, message -->
+
+        <form id="frm-recommendations" action="/recommendations" method="POST">
+          <p>
+          <label for="firstName">Adınız:</label>
+          <input type="text" name="firstName" id="firstName" required placeholder="Adınızı yazınız..."/>
+        </p>
+        <p>
+          <label for="lastName">Soyadınız:</label>
+          <input type="text" name="lastName" id="lastName" required />
+        </p>
+        <p>
+          <label for="email">Epostanız:</label>
+          <input type="email" name="email" id="id" required />
+        </p>
+
+        <p>
+          <label for="message">Mesajınız:</label>
+          <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+        </p>
+        <button type="submit">Gönder</button>
+        </form>
         </section>
 
       </main>

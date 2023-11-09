@@ -1,0 +1,69 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'IBM Plex Mono', monospace;
+    background-color: rgb(236, 229, 242);
+    
+}
+
+h1{
+    font-size:32px;
+    margin-bottom:16px;
+  
+}
+
+h1 strong{
+    background-color: black;
+    color:aquamarine;
+   
+}
+
+a{
+    color:inherit;
+    text-decoration: none;
+}
+
+li{
+    margin:16px 0;
+}
+
+/* display:inline 
+1. Satır (row) ekseninde dizilmeye yatkınlar
+2. width, height kabul etmiyorlar
+3. default width auto;
+4. default height, line-height ile belirlenir
+5. inline öğeler, kapsayıcılarından birinin text-align değeri left, right, center, justify yapılarak hizalanabilirler.
+*/
+body{
+    text-align:right;
+    
+}
+
+a{ 
+    border:2px solid blue;
+    width:2000px;
+    height:2000px;
+   
+}
+
+
+/* display:block 
+1. Sütun (column, vertical ) ekseninde dizilmeye yatkınlar
+2. width ve height verebilirsin.
+3. default width 100% ( ebeveyn kadar)
+4. default height auto
+5. positive space margin left ya da right auto kullanılarak dağıtılabilir. 
+*/
+h1{ border:2px solid pink}
+div{ border:2px solid red;  width:40px; height:40px;
+margin-left:auto;  margin-right:auto; }
+
+
+/* display:inline-block */
+
+/* width ve height kabul eden inline öğelerdir */
+img{ width:18px; }
+
+

@@ -1,0 +1,77 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'IBM Plex Mono', monospace;
+    background-color: rgb(194, 238, 218);
+}
+
+h1{
+    font-size:32px;
+}
+
+h1 strong{
+    background-color: black;
+    color:aquamarine;
+}
+
+a{
+    color:inherit;
+    text-decoration: none;
+}
+
+li{
+    margin:16px 0;
+}
+
+
+/* ebeveyninin ilk çocuğu olan öğeler */
+/*
+:first-child{
+    border:2px solid red;
+}
+*/
+
+/* ebeveyninin ilk çocuğu olan li öğeleri */
+li:first-child{
+    border-color:blue;
+}
+
+
+li:last-child{
+    font-weight:bold;
+}
+
+li:nth-child(3){
+    font-style: italic;
+}
+    
+
+div{ border:10px solid black; width:50px; height:50px;}
+
+div:nth-child(odd){ background-color: beige;}
+
+div:nth-child(even){ background-color: azure;}
+
+div:nth-child(2n){ border-color:blue; }
+
+
+
+header{
+    border:2px solid pink;
+    padding:24px;
+    margin-top:24px;
+}
+
+header nav:nth-of-type(1){ border:2px solid blue; }
+
+header nav:nth-last-of-type(1){ border:2px solid blue; }
+
+
+
+button{ border:none; }
+
+button:hover{
+    background-color:pink;
+}

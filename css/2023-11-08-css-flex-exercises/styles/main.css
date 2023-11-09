@@ -1,0 +1,90 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'IBM Plex Mono', monospace;
+    background-color: rgb(236, 229, 242);
+    
+}
+
+h1{
+    font-size:32px;
+    margin-bottom:16px;
+  
+}
+
+h1 strong{
+    background-color: black;
+    color:aquamarine;
+   
+}
+
+a{
+    color:inherit;
+    text-decoration: none;
+}
+
+li{
+    margin:16px 0;
+}
+
+
+#root > header{
+    background-color: #333;
+    color:white;
+    padding:24px;
+}
+
+main{
+    padding:48px 0 64px;
+    background-color: rgb(229, 218, 237);
+    min-height:500px; /* en az 500px yükseklikte ol */
+}
+
+main > section{
+    border:2px solid purple;
+    padding:48px;
+    max-width:1000px;
+    /*
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:24px;
+    */
+
+    margin:0 auto 24px;
+}
+
+#root > footer{
+    background-color: #333;
+    padding:24px 0 48px;
+    text-align:center;
+    color:white;
+}   
+
+/* egzersizler */
+div.e1{
+    border:2px solid red;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:24px;
+}
+
+div.e1 a.logo{
+    border:2px solid blue;
+}
+
+div.e1 nav{
+    border:2px solid red;
+
+}
+
+
+
+
+
+
+
+
+
