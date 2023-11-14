@@ -21,7 +21,7 @@ console.log(circumferenceMsg);
 let age1 = 15;
 let age2 = 70;
 
-const msg = "Yaşlar toplamı" + 15 + 70; //weakly typed ( coersion )
+const msg = "Yaşlar toplamı" + 15 + 70; //weakly typed ( coercion )
 
 const msg2 = "Yaşlar toplamı " + (15 + 70);
 

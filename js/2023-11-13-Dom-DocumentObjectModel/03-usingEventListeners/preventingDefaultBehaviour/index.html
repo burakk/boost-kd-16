@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Preventing Default Behaviour</title>
+    <script src="./main.js" defer></script>
+  </head>
+  <body>
+    <a href="https://www.amazon.com.tr">Amazon web sayfasına git.</a>
+
+    <form id="frm-register" action="/register" method="POST">
+      <input type="text" name="" id="" />
+      <input type="text" name="" id="" />
+      <button type="submit">Gönder</button>
+    </form>
+
+    <form
+      onsubmit="handleLogin(event)"
+      id="frm-login"
+      action="/login"
+      method="POST"
+    >
+      <input type="text" name="" id="" />
+      <input type="text" name="" id="" />
+      <button type="submit">Gönder</button>
+    </form>
+  </body>
+</html>

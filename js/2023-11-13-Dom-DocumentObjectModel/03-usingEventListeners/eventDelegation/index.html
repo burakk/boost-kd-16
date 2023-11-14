@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Delegation</title>
+    <script src="./main.js" defer></script>
+    <style>
+      nav {
+        border: 1px solid black;
+        padding: 24px;
+        background-color: lightgray;
+      }
+
+      ul {
+        background-color: pink;
+        padding: 24px;
+      }
+
+      li {
+        background-color: blue;
+        padding: 16px;
+        margin-bottom:8px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="the-nav">
+      <ul>
+        <li>
+          <button data-btn-index="0">item</button>
+        </li>
+        <li>
+          <button data-btn-index="1">item</button>
+        </li>
+        <li>
+          <button data-btn-index="2">item</button>
+        </li>
+        <li>
+          <button data-btn-index="3">item</button>
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>
