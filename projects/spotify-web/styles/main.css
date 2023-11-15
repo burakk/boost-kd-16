@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
+
+:root{
+    /* custom property */
+    --primary-clr-50:hsl(120, 61%, 50%);
+    --primary-clr-60:hsl(120, 61%, 60%);
+    --primary-clr-30:hsl(120, 61%, 30%);
+    --secondary-clr-50:hsl(240, 81%, 50%);
+    --secondary-clr-60:hsl(240, 81%, 60%);
+
+    --neutral-clr-0:#222;
+    --neutral-clr-100:#fff;
+
+    --border-radius-sm:4px;
+}
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+img{
+    max-width:100%;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+  
+}
+
+.logo{
+    font-size: 1rem;
+    
+    display:flex;
+    align-items: center;
+    gap:8px;
+}
+
+.logo i {
+    font-size: 1.6rem;
+}
+
+
+#root{
+    border:2px solid gray;
+}
+
+#root > header{
+  
+    background-color: var(--neutral-clr-0);
+    color:var(--neutral-clr-100);
+}
+
+main{
+    border:2px solid red;
+}
+
+main > section.why-premium{
+    padding:68px;
+    border:2px solid red;
+}
+
+#root > footer{
+    border:2px solid gray;
+    min-height:400px;
+    background-color: var(--neutral-clr-0);
+    color:var(--neutral-clr-100);
+}
+
+/* banners */
+.banner{
+    min-height:300px;
+    background-color: var(--secondary-clr-60);
+    color:white;
+}
+
+/* utilities */
+.limited-width{
+    max-width:1000px;
+    margin:0 auto;
+}
+
+
+/* navigations  */
+.nav-hamburger{
+    
+    background-color: red;
+    position:absolute;
+    top:0;
+    right:0;
+   
+}
+
+.nav-hamburger > ul{
+    width:70vw;
+    height:100vh;
+    border:8px solid black;
+    padding:24px;
+    position:relative;
+    display:none;
+  
+}
+
+.nav-hamburger.state-expanded > ul{
+    display:block;
+}
+
+.nav-hamburger li{
+   
+    border:2px solid blue;
+}
+.nav-hamburger  li a{
+   
+    border:2px solid black;
+    display:flex;
+    height:80px;
+    align-items: center;
+    font-size:2.4rem;
+    font-weight:700;
+    
+
+}
+
+.nav-hamburger > .btn-toggle{
+    position:absolute;
+    top:16px;
+    right:16px;
+}
+
+
+@media screen and ( min-width:1000px ) {
+    #root > header > .limited-width{
+        display:flex;
+        justify-content: space-between;
+    }
+    
+
+    .nav-hamburger{
+        position:static
+    }
+    .nav-hamburger > .btn-toggle{
+        display:none;
+    }
+
+    .nav-hamburger > ul{
+        display:block;
+        width:auto;
+        height:auto;
+        display:flex;
+    }
+
+    
+}
+

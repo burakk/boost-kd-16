@@ -10,10 +10,26 @@
 
 //3-
 
+
+
+// carousel nav element'ini al
 const carouselNavEl = document.querySelector(".carousel > nav");
 
+const carouselContentContainerEl = document.querySelector(".carousel > .content-container");
+
+
+//carousel nav element'ine olay dinleyicisi ekle (olayı çocuklara delege et)
 carouselNavEl.addEventListener("click", handleCarouselMove);
 
+
+
 function handleCarouselMove(e) {
-  alert(e.target.dataset.index);
+  const target = e.target;
+  const btnIndex = target.dataset.index;
+  
+  //const testing = btnIndex * -100 + "%";
+
+  const moveTo = parseInt(btnIndex) * -100;
+  carouselContentContainerEl.style.marginLeft = `${moveTo}%`;
+  
 }
