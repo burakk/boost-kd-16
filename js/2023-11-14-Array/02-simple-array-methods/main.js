@@ -58,12 +58,33 @@ const newMessage = months.join("-") + " ,bu aylar güzel aylar";
 console.log( newMessage);
 
 
-/* slice */
+/* slice */ 
 const myCakeSlices = ["limonlu", "portakallı", "çikolatalı", "böğürtlen", "frambuaz"];
 
-const slice1 = myCakeSlices.slice(0, 3);
+const slice1 = myCakeSlices.slice(0, 3); 
 
 console.log( myCakeSlices );
 
+const slice2 =  myCakeSlices.slice(2); 
 
-/* splice */
+console.log(slice2); 
+
+const slice3 = myCakeSlices.slice(-3);
+
+console.log(slice3); 
+
+const slice4 = myCakeSlices.slice(-3, -1);
+
+console.log(slice4); 
+
+
+/* splice  - remove, insert */
+const myCakeSlices2 = ["Karamelli", "Vanilyalı", "Ispanaklı", "Cevizli", "Çilekli"];
+
+const spliceRetVal = myCakeSlices2.splice(0, 2); //remove element first two elements - ["Ispanaklı", "Cevizli", "Çilekli"]
+
+console.log(spliceRetVal, myCakeSlices2);
+
+const spliceRetVal2 = myCakeSlices2.splice(1, 1, "Vanilyalı"); //remove element and add new element ["Ispanaklı", "Cevizli", "Çilekli"]
+
+console.log(spliceRetVal2, myCakeSlices2);
