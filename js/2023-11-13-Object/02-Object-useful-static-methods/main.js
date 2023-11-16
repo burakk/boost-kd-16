@@ -15,21 +15,48 @@ console.log(keysOfMyObjAsArray);
 
 const valuesOfMyObjAsArray = Object.values(myObj);
 
-
 console.log(valuesOfMyObjAsArray);
-
-
-
-const DATA = [
-    {id:0 , inStock:false, color:"red" },
-    {id:0 , color:"red", category:"laptop" }
-]
-
 
 // [ id, inStock, color, category ]
 
-
-
 // foreach, for, Object.keys(myObj)
 
-DATA.forEach
+DATA.forEach((item, index, arr) => {});
+
+const DATA = [
+  { id: 12, color: "red", size: "lg" },
+  { id: 14, color: "blue", size: "sm", inStock: false },
+];
+
+//[id, color, size, inStock]
+
+/*
+  const distincKeys = [];
+  
+  DATA.forEach((item) => {
+    Object.keys(item).forEach((key) => {
+  
+      if(!distincKeys.includes(key)){
+          distincKeys.push(key);
+      }
+      
+    });
+  });
+  
+  */
+
+function getDistinctKeys(data) {
+  const distincKeys = [];
+
+  data.forEach((item) => {
+    Object.keys(item).forEach((key) => {
+      if (!distincKeys.includes(key)) {
+        distincKeys.push(key);
+      }
+    });
+  });
+
+  return distincKeys;
+}
+
+console.log(getDistinctKeys(DATA));
