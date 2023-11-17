@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fetch api POST method</title>
+    <script src="./main.js" defer></script>
+    <style>
+      *{ box-sizing:border-box; }
+      form{
+        display: flex;
+        flex-direction:column;
+        row-gap:16px;
+        max-width:400px;
+        margin:48px auto;
+      }
+      input{ padding:8px;  height:32px;}
+      button{ height:32px; border:none; background-color:rgb(215, 215, 8); color:black;
+      cursor:pointer;
+     }
+    </style>
+  </head>
+  <body>
+    <form id="frmAdd">
+      <h2>Yeni makale ekle</h2>
+      <input
+        type="text"
+        name="title"
+        id="title"
+        placeholder="Makale Başlığı yazınız"
+
+      />
+      <textarea name="bodyText" id="bodyText" cols="30" rows="10"></textarea>
+      <button type="submit">Yeni makale ekle</button>
+    </form>
+  </body>
+</html>
+
+
