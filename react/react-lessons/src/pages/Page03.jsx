@@ -1,27 +1,27 @@
-export function Page03(){
-    return(
+export function Page03() {
+    return (
         <section>
             <h1>Bir komponente özellikler paslamak, passing props to a component</h1>
-            <MyButton size="lg"/>
-           
+            <MyButton size="lg" />
+
 
 
             <MyButton size="sm"></MyButton>
-          
-            <MyButton size="lg" color="red"/>
-            <MyButton size="lg"/>
-            <MyButton size="lg" color="red"/>
-            <MyButton size="lg"/>
-            <MyButton size="lg"/>
+
+            <MyButton size="lg" color="red" />
+            <MyButton size="lg" />
+            <MyButton size="lg" color="red" />
+            <MyButton size="lg" />
+            <MyButton size="lg" />
 
 
             <MyAdvancedButton  >
-                
+
                 Buton 2
 
             </MyAdvancedButton>
 
-          
+
 
 
             <MyAdvancedButton >
@@ -32,12 +32,17 @@ export function Page03(){
             <MyCard theme="dark" borderColor="green">
                 <h1>Hp laptop</h1>
             </MyCard>
-          
+
             <MyCard theme="dark" borderColor="orange">
                 <h1>Apple laptop </h1>
             </MyCard>
 
-            <Player nowPlaying="Test"/>
+            <Player nowPlaying="Test" />
+
+            <Carousel speed="500ms" loop={false} />
+
+            <h2>Forwarding Props via spread syntax</h2>
+            <ComponentA title="Deneme" id={12} size="lg" direction="row"/>
         </section>
     )
 }
@@ -45,7 +50,7 @@ export function Page03(){
 
 
 
-function MyButton(props){
+function MyButton(props) {
     console.log(props);
     const size = props.size;
     const color = props.color;
@@ -53,22 +58,22 @@ function MyButton(props){
 }
 
 
-function MyAdvancedButton(props){
+function MyAdvancedButton(props) {
     console.log(props, "***");
     const children = props.children;
-   
+
     return <button type="button">{children}</button>
 }
 
 
 
 
-function MyCard(props){
+function MyCard(props) {
     const theme = props.theme;
     const children = props.children;
     const borderColor = props.borderColor;
-    const style = { border:"2px solid orange", padding:"24px", maxWidth:"200px", borderColor:borderColor }
-    return <div className={theme} style={ style }> {children }</div>
+    const style = { border: "2px solid orange", padding: "24px", maxWidth: "200px", borderColor: borderColor }
+    return <div className={theme} style={style}> {children}</div>
 }
 
 
@@ -101,12 +106,12 @@ function Player(props){
 */
 
 
-function Player(props){
-     
-    const playerStyles= { border:"2px solid white", padding:"24px" } ;
+function Player(props) {
+
+    const playerStyles = { border: "2px solid white", padding: "24px" };
     return (
-        <div style={  playerStyles  }>
-            <h3 >Şu anda çalan şarkı {  props.nowPlaying  }</h3>
+        <div style={playerStyles}>
+            <h3 >Şu anda çalan şarkı {props.nowPlaying}</h3>
 
             <nav>
                 <button type="button">Oynat</button>
@@ -114,4 +119,36 @@ function Player(props){
             </nav>
         </div>
     )
+}
+
+
+
+function Carousel({ speed, loop }) {
+    speed;
+    loop;
+    return null;
+
+}
+
+//{title:"a", id:12, color:"red", size:"lg", direction:"row"}
+
+function ComponentA(props) {
+
+    return <div>
+        <h1>Component A</h1>
+        <ComponentB  {...props} />
+    </div>
+
+}
+
+
+function ComponentB({ title, id, color, size, direction }) {
+
+    return (
+        <div>
+            <h2>Component B</h2>
+            {title}
+        </div>
+    )
+
 }
