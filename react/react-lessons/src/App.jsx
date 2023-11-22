@@ -3,11 +3,11 @@ import "./assets/styles/reset.css";
 import "./assets/styles/App.css";
 
 
-import { Page01, Page02, Page03, Page04 } from "./pages";
+import { Page01, Page02, Page03, Page04, Page05 } from "./pages";
 
 
 export function App() {
-  const path = "/04";
+  const path = "/05";
   return (
     <>
       <header>
@@ -22,6 +22,8 @@ export function App() {
         {  path == "/03" &&  <Page03 />  }
 
         {  path == "/04" &&  <Page04 />  }
+
+        {  path == "/05" &&  <Page05 />  }
       
 
         
