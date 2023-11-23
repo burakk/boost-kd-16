@@ -2,19 +2,27 @@ import Logo from "./components/Logo";
 import "./assets/styles/reset.css";
 import "./assets/styles/App.css";
 
+import { Nav } from "./components/Nav";
 
 import { Page01, Page02, Page03, Page04, Page05, Page06, Page07 } from "./pages";
 
 
 export function App() {
-  const path = "/07";  
+  let path = "/03";   //01
+
+  function changeAppPath(inPath){
+      path = inPath;
+      alert( "path changed to " + path);
+  }
 
 // /01, /02, /03
 
   return (
     <>
       <header>
-        <Logo />
+        <Logo/>
+
+       <Nav onChangePath={changeAppPath}/>
       </header>
       <main>
 
