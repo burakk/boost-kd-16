@@ -2,6 +2,7 @@
 import './App.css';
 import { useState } from 'react';
 import { Gallery } from './components/Gallery';
+import { Form } from './components/Form';
 
 function App() {
 
@@ -16,6 +17,8 @@ function App() {
 
 
      <Gallery/>
+
+     <Form/>
     </div>
   )
 

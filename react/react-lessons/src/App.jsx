@@ -5,14 +5,14 @@ import "./assets/styles/App.css";
 import { Nav } from "./components/Nav";
 
 import { Page01, Page02, Page03, Page04, Page05, Page06, Page07 } from "./pages";
-
+import { useState } from "react";
 
 export function App() {
-  let path = "/03";   //01
+  const [path, setPath] = useState("/01");
 
   function changeAppPath(inPath){
-      path = inPath;
-      alert( "path changed to " + path);
+    setPath(inPath);
+      //alert( "path changed to " + path);
   }
 
 // /01, /02, /03
