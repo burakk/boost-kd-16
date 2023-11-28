@@ -1,0 +1,57 @@
+*{
+  box-sizing: border-box;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.search-container{
+  width: 400px;
+  height: 400px;
+  background-color: rgba(250, 235, 215, 0.391);
+  border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+}
+
+table{
+  border: 2px solid white;
+}
+
+table > thead > tr{
+  border: 1px solid white;
+}
+
+table > tbody{
+  border: 1px solid white;
+}
+
+
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
