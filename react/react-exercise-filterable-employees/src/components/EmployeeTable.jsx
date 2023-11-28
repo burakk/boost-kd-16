@@ -1,50 +1,54 @@
 import { DATA_EMPLOYEE } from "../data/data"
 
-export function EmployeeTable({searchTerm, onlyAvailableUsers}){
 
-    // const [employeeTable, setEmployeeTable] = useState(DATA_EMPLOYEE);
-    console.log(onlyAvailableUsers)
-    // let filteredTable = DATA_EMPLOYEE.filter((e) => e.name.includes(searchTerm))
+
+const sortedEmployeeData = DATA_EMPLOYEE.slice();
+
+sortedEmployeeData.sort((a, b) => {
+
+    if (a.profession < b.profession) return -1;
+    if (a.profession > b.profession) return 1;
+    return 0;
+});
+
+
+export function EmployeeTable({ searchTerm, onlyAvailableUsers }) {
+
+    let lastProfession;
+
     let filteredEmployeeTable = [];
-    DATA_EMPLOYEE.forEach((employee) => {
-        // if(onlyAvailableUsers == true){
-        //     if(employee.name.includes(searchTerm) && employee.available == true){
-        //         filteredEmployeeTable.push(employee)
-        //     }
-        // }
-        // else {
-        //     if(employee.name.includes(searchTerm)){
-        //         filteredEmployeeTable.push(employee)
-        //     }
-        // }
+    sortedEmployeeData.forEach((employee) => {
 
-        if(employee.name.toLocaleLowerCase("tr").indexOf(searchTerm.toLocaleLowerCase("tr")) == -1) return;
+        if (employee.name.toLocaleLowerCase("tr").indexOf(searchTerm.toLocaleLowerCase("tr")) == -1) return;
 
-        if(onlyAvailableUsers && !employee.available) return;
+        if (onlyAvailableUsers && !employee.available) return;
 
-        filteredEmployeeTable.push(employee);
 
-        
+        if (lastProfession != employee.profession) {
+            filteredEmployeeTable.push(<tr key={employee.profession}><td colSpan="3"><strong style={{ color: "pink" }}>{employee.profession}</strong></td></tr>);
+            lastProfession = employee.profession;
+        }
+
+        filteredEmployeeTable.push(
+            <tr key={employee.id}>
+                <td>{employee.id}</td>
+                <td>{employee.name}</td>
+                <td>{employee.available.toString()}</td>
+            </tr>
+        );
     })
-//Uncaught TypeError: Cannot read properties of undefined (reading 'push')
-    return(
+
+    return (
         <table>
             <thead>
                 <tr>
-                <th>Name</th>
-                <th>Profession</th>
-                <th>Available</th>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Available</th>
                 </tr>
             </thead>
             <tbody>
-                    {filteredEmployeeTable.map((employee)=>{return(
-                        <tr key={employee.id}>
-                            <td>{employee.name}</td>
-                            <td>{employee.profession}</td>
-                            <td>{employee.available.toString()}</td>
-                        </tr>
-                        )
-                    })}
+                {filteredEmployeeTable}
             </tbody>
         </table>
     )

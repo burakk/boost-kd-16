@@ -11,7 +11,7 @@
 
 .search-container{
   width: 400px;
-  height: 400px;
+ 
   background-color: rgba(250, 235, 215, 0.391);
   border: 2px solid red;
   display: flex;
