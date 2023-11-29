@@ -2,54 +2,39 @@
 import { useState } from 'react';
 import './App.css'
 import { DATA_TODOS } from './data/data'
+import { FrmAddNewToDo } from './components/FrmAddNewToDo';
+import { ToDoList } from './components/ToDoList';
+
+//todo {id:1, content:"todo1", isCompleted:false}
+
 
 function ToDoApp() {
   const [todos, setTodos] = useState(DATA_TODOS);
+
+
+  function addNewToDo(newTodoObj) {
+    const newToDosList = [newTodoObj, ...todos]
+    setTodos(newToDosList);
+
+  }
+
+  function deleteToDo(id) {
+    alert(id);
+  }
+
+  function updateToDo() {
+
+  }
+
   return (
     <div className="ToDoApp">
       <h1>Yapılacaklar</h1>
-      <FrmAddNewToDo />
-      <ToDoList todos={todos} />
+      <FrmAddNewToDo onAddNewToDo={addNewToDo} />
+      <ToDoList todos={todos} onDeleteToDo={deleteToDo} />
     </div>
   )
 }
 
-
-function FrmAddNewToDo() {
-
-  return (
-    <form id="frmAddNewToDo" style={{ border: "2px solid red" }}>
-      <input type="text" name="newToDoContent" id="newToDoContent"
-        placeholder="Bir iş yazınız..." />
-      <Button> Ekle </Button>
-    </form>
-  )
-}
-
-
-function ToDoList({ todos }) {
-
-  return (
-    <ul>
-      <h1>To do list</h1>
-      {todos.map((todo) => <ToDoItem content={todo.content} />)}
-    </ul>
-  )
-}
-
-function ToDoItem({ content }) {
-
-  return (
-    <li>
-      <h1>{content}</h1>
-    </li>
-  )
-}
-
-
-function Button({ children }) {
-  return <button>{children}</button>;
-}
 
 
 export default ToDoApp

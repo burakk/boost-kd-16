@@ -1,0 +1,22 @@
+.TicTacToe{
+    border:4px solid pink;
+}
+
+.Board{
+    background-color: rgb(61, 71, 81);
+    width:400px;
+    height:400px;
+    display: flex;
+    flex-wrap:wrap;
+}
+
+.Tile{
+    border:2px solid rgb(25, 97, 173);
+    flex:1 1 33.3333%;
+    height:33.3333%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size:3rem;
+    font-weight: bold;
+}
