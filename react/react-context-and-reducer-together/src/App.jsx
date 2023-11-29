@@ -15,11 +15,7 @@ function App() {
 
       <Basket />
 
-      <h2>Sepete Ekleyebileceğiniz  Ürünler</h2>
-      <ul>
-        <li>Arçelik mutfak blender 3000 <button>Sepete Ekle</button></li>
-        <li>Vestel çamaşır kurutma makinesi 17000 <button>Sepete Ekle</button></li>
-      </ul>
+      <DiscountedProducts />
 
       <Footer />
 
@@ -34,7 +30,7 @@ function App() {
 
 function Basket() {
 
-  const basketData = useContext(BasketContext)
+  const { basketData, dispatch } = useContext(BasketContext)
 
   return (
     <div className="Basket">
@@ -67,7 +63,7 @@ function Footer() {
 
 
 function Summary() {
-  const basketData = useContext(BasketContext);
+  const { basketData, dispatch } = useContext(BasketContext);
   const basketTotal = basketData.reduce((acc, p) => {
     return acc + p.price
   }, 0)
@@ -80,5 +76,32 @@ function Summary() {
     </div>
   )
 }
+
+
+function DiscountedProducts() {
+
+  const { dispatch } = useContext(BasketContext);
+
+  return (
+    <div>
+      <h2>Sepete Ekleyebileceğiniz  Promosyonlu Ürünler</h2>
+      <ul>
+        <li>Arçelik mutfak blender 3000 <button onClick={
+          (e) => {
+
+            const action = { type: "added", product: { id: 35, title: "Arçelik mutfak blender", price: 3000 } }
+            dispatch(action)
+
+          }
+
+        }>Sepete Ekle</button></li>
+        <li>Vestel çamaşır kurutma makinesi 17000 <button>Sepete Ekle</button></li>
+      </ul>
+    </div>
+  )
+}
+
+
+
 
 export default App
