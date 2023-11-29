@@ -31,7 +31,29 @@ function TasksApp() {
   return (
     <ul>
       {tasks.map(t => <li>{t.id} - {t.title}</li>)}
-      <button onClick={e => { dispatch({ type: "added", taskObj: { title: "Hello new task" } }) }}>ekle </button>
+      <button onClick={
+        (e) => {
+          const action = { type: "added", taskObj: { title: "Hello new task" } };
+          dispatch(action)
+
+        }
+      }>ekle </button>
+
+      <button onClick={
+        (e) => {
+          const action = { type: "deleted", id: 0 }
+          dispatch(action)
+        }
+      }>sil</button>
+
+      <button
+        onClick={
+          (e) => {
+            const action = { type: "updated", id: 0, title: "React Dokümantasyonu İyice Oku" }
+            dispatch(action)
+          }
+        }
+      >güncelle</button>
     </ul>
   )
 

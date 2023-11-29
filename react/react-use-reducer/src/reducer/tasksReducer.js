@@ -15,6 +15,8 @@ export function tasksReducer(tasks, action) {
         }
         return t;
       });
+
+      return newTasks;
     }
     default:
       throw new Error("Action type not defined ");
