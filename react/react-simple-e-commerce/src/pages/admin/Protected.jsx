@@ -1,11 +1,12 @@
-import { Outlet, Navigate } from "react-router";
+import { Navigate, Outlet } from "react-router-dom";
 import { Layout } from "./Layout";
+import { useContext } from "react";
+import { AuthContext } from "../../context/AuthContext";
 
-export function Protected() {
-
-    const token = false; //check jwt json web token
-
-    if (token) {
+export function Protected(){
+    const {token} = useContext(AuthContext); // {token, addToken, clearToken}
+    console.log(token, "****")
+    if(token){
         return (
             <Layout>
                 <Outlet />
@@ -13,6 +14,5 @@ export function Protected() {
         )
     }
 
-    return <Navigate to="/giriş" />
-
+    return <Navigate to="/login" />
 }

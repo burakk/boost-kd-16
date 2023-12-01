@@ -1,3 +1,5 @@
-export function Dashboard() {
-    return <h1>Dashboard</h1>;
+export function DashBoard(){
+    return(
+        <h1>DashBoard</h1>
+    )
 }

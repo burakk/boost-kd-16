@@ -6,24 +6,22 @@
 }
 
 .logo {
-  
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
-  font-size:1.4rem;
+  font-size: 1.4rem;
   background-color: pink;
-  color:black;
+  color: black;
 }
 
 .logo strong{
-  font-size:0.75rem;
-  display:inline-block;
-  width:100%;
+  font-size: 0.75rem;
+  display: inline-block;
+  width: 100%;
   background-color: black;
-  color:white;
-  transform: rotate(-1.3deg);
+  color: white;
+  transform: rotate(-2deg);
 }
-
 
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);

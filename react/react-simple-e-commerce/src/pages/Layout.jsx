@@ -1,23 +1,20 @@
 import { Outlet } from "react-router-dom";
-import "../App.css";
+import "../App.css"
 
 export function Layout() {
     return (
         <>
             <header>
                 <h1 className="logo">Basitçe Alışveriş
-                    <strong>e-ticaretin en basit hali </strong>
+                <strong>e-ticaretin en basit hali</strong>
                 </h1>
             </header>
             <main>
-
-                <Outlet />
-
+                <section>
+                    <Outlet />
+                </section>
             </main>
-
-            <footer>
-                <p>Her hakkı saklıdır @ 2023 KD-16</p>
-            </footer>
+            <footer>Her Hakkı Saklıdır @ 2023 KD-16</footer>
         </>
-    )
+    );
 }

@@ -1,3 +1,3 @@
-export function Products() {
-    return <h1>Ürünler</h1>
+export function Products(){
+    return <h1>Products</h1>
 }

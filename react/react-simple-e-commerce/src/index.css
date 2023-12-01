@@ -25,7 +25,6 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-
   min-width: 320px;
   min-height: 100vh;
 }
@@ -67,14 +66,32 @@ button:focus-visible {
   }
 }
 
-
 form{
-  display:flex;
+  display: flex;
   flex-direction: column;
-  gap:24px;
+  gap: 24px;
 }
 
 form input{
-  padding:1.2rem;
-  font-size:0.9rem;
+  padding: 1.2rem;
+  font-size: 0.9rem;
+}
+
+ul li button{
+  /* display: none; */
+  visibility: hidden;
+}
+
+ul li:hover button{
+  /* display: inline-block; */
+  visibility: visible;
+  background-color: crimson;
+}
+
+ul.productList li {
+  border: 1px dotted gray;
+  padding: 16px 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
 }

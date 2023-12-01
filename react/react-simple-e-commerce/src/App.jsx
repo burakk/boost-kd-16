@@ -1,33 +1,40 @@
+import { useEffect, useState } from "react";
+import { Routes, Route } from "react-router-dom";
+import { Home } from "./Pages/Home";
+import { Login } from "./Pages/Login";
+import { Products } from "./Pages/Products";
+import { Layout } from "./Pages/Layout";
+import { DashBoard } from "./Pages/admin/DashBoard";
+import { Products as AdminProducts } from "./Pages/admin/Products";
+import { Protected } from "./Pages/admin/Protected";
+import { AuthContextProvider } from "./context/AuthContext";
 
-import { Routes, Route } from 'react-router-dom';
-import { Home } from "./pages/Home";
-import { Products } from "./pages/Products";
-import { Login } from "./pages/Login";
-import { Layout } from "./pages/Layout";
-import { Protected } from './pages/admin/Protected';
-import { Dashboard } from './pages/admin/Dashboard';
-import { Products as AdminProducts } from './pages/admin/Products';
-
+// .NET CORS => Cross-origin resource sharing
 
 function App() {
-
-  return (
-
-    <Routes>
-      <Route path="/admin" element={<Protected />} >
-        <Route path="" element={<Dashboard />} />
-        <Route path="ürünler" element={<AdminProducts />} />
-      </Route>
-      <Route path="/" element={<Layout />}>
-        <Route path="" element={<Home />} />
-        <Route path="ürünler" element={<Products />} />
-        <Route path="giriş" element={<Login />} />
-      </Route>
-
-      <Route path="*" element={<h3>Sayfa bulunamadı. Ooops! </h3>} />
-    </Routes>
-
-  );
+    return (
+        <AuthContextProvider>
+            <Routes>
+                <Route path="/admin" element={<Protected />}>
+                    <Route path="" element={<DashBoard />} />
+                    <Route path="products" element={<AdminProducts />} />
+                </Route>
+                <Route
+                    path="/"
+                    element={
+                        <main>
+                            <Layout />
+                        </main>
+                    }
+                >
+                    <Route path="" element={<Home />} />
+                    <Route path="products" element={<Products />} />
+                    <Route path="login" element={<Login />} />
+                </Route>
+                <Route path="*" element={<h3>Sayfa bulunamadı. Ooops!</h3>} />
+            </Routes>
+        </AuthContextProvider>
+    );
 }
 
 export default App;
